@@ -1,13 +1,12 @@
 const express =  require("express") ;
 const socialRouter = express.Router() ;
-
+const userAuth = require("../middleware/auth.js"); 
 const {addAccount , getAccounts , deleteAccount} = require("../middleware/socialController");
 
+socialRouter.post("/social/add" , userAuth , addAccount) ;
 
-socialRouter.post("/social/add" , addAccount) ;
+socialRouter.get("/social/account" , userAuth ,getAccounts) ;
 
-socialRouter.get("/" , getAccounts) ;
-
-socialRouter.delete("/:id" , deleteAccount) ;
+socialRouter.delete("/delete" , userAuth  ,deleteAccount) ;
 
 module.exports = socialRouter ;

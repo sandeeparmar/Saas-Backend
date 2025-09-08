@@ -33,15 +33,13 @@
 
 
 #USER FLOW DIAGRAM 
-
-
 User visits SaaS Website
            │
            ▼
       Sign Up / Login
            │
            ▼
-        Dashboard
+        Dashboard -> user must be authenticate 
         ┌───────┬───────────┐
         │                   │
         ▼                   ▼

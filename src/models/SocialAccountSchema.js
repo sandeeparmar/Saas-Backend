@@ -19,7 +19,8 @@ const SocialAccountSchema = mongoose.Schema({
     type : String 
    } ,
    accountId : {
-    type : String 
+    type : String , 
+    unique : true 
    }
 
 } , {timestamps : true} 
